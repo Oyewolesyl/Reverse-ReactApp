@@ -1,0 +1,613 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: #333;
+  background-color: #f5f5f5;
+  height: 1000px;
+  font-family: Inter, sans-serif;
+  line-height: 1.5;
+}
+
+.mobile-container {
+  background-color: #fff;
+  flex-direction: column;
+  max-width: 480px;
+  min-height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  position: relative;
+}
+
+.header {
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  display: flex;
+}
+
+.logo, .logo-text {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.logo-text.green {
+  color: #22c55e;
+}
+
+.menu-button {
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.main-content {
+  flex: 1;
+  padding-bottom: 64px;
+  overflow-y: auto;
+}
+
+.video-container {
+  width: 100%;
+  position: relative;
+}
+
+.feature-video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hero-image {
+  z-index: 1;
+  background-color: #1f2937;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 200px;
+  position: relative;
+}
+
+.hero-overlay {
+  padding: 16px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.hero-title {
+  color: #fff;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.action-section {
+  padding: 16px;
+}
+
+.recycle-button {
+  color: #fff;
+  cursor: pointer;
+  background-color: #22c55e;
+  border: none;
+  border-radius: 4px;
+  width: 100%;
+  padding: 16px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.merch-text {
+  text-align: center;
+  margin-top: 16px;
+}
+
+.brand-text {
+  font-weight: bold;
+}
+
+.green-text {
+  color: #22c55e;
+}
+
+.merchandise-section {
+  background-color: #f5f5f5;
+  flex-direction: column;
+  gap: 0;
+  padding: 0;
+  display: flex;
+}
+
+.merch-item {
+  color: #fff;
+  background-color: #1f2937;
+  border-radius: 0;
+  padding: 16px;
+}
+
+.merch-image, .merch-image2, .merch-image3, .merch-image4 {
+  background-color: #4b5563;
+  background-position: center;
+  background-size: cover;
+  height: 150px;
+  margin-bottom: 8px;
+}
+
+.merch-details {
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+
+.view-button {
+  color: #9ca3af;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 14px;
+}
+
+.bottom-nav {
+  background-color: #111;
+  border-top: 1px solid #111;
+  justify-content: space-around;
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 16px 0;
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.nav-item {
+  color: #6b7280;
+  flex-direction: column;
+  align-items: center;
+  font-size: 12px;
+  text-decoration: none;
+  display: flex;
+}
+
+.nav-item.active {
+  color: #22c55e;
+}
+
+.nav-item svg {
+  width: 32px;
+  height: 32px;
+  margin-bottom: 4px;
+}
+
+.auth-content {
+  background-color: #f5f5f5;
+  padding: 24px;
+}
+
+.auth-title {
+  margin-bottom: 24px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.auth-form {
+  flex-direction: column;
+  gap: 24px;
+  display: flex;
+}
+
+.form-group {
+  flex-direction: column;
+  gap: 8px;
+  display: flex;
+}
+
+.form-group label {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.form-input {
+  border: 2px solid #d1d5db;
+  border-radius: 24px;
+  height: 48px;
+  padding: 0 16px;
+  font-size: 16px;
+}
+
+.checkbox-group {
+  align-items: center;
+  gap: 8px;
+  display: flex;
+}
+
+.checkbox {
+  width: 18px;
+  height: 18px;
+}
+
+.checkbox-label {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.auth-button {
+  color: #fff;
+  cursor: pointer;
+  background-color: #000;
+  border: none;
+  border-radius: 24px;
+  height: 48px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.auth-link {
+  text-align: center;
+  font-size: 14px;
+}
+
+.auth-link a {
+  color: #6b7280;
+  text-decoration: none;
+}
+
+.mt-4 {
+  margin-top: 16px;
+}
+
+.divider {
+  justify-content: center;
+  margin-top: 32px;
+  display: flex;
+}
+
+.divider-line {
+  background-color: #000;
+  border-radius: 2px;
+  width: 64px;
+  height: 4px;
+}
+
+.profile-header {
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  display: flex;
+}
+
+.spacer {
+  width: 24px;
+}
+
+.profile-content {
+  background-color: #f5f5f5;
+}
+
+.profile-header-section {
+  background-color: #fff;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px 16px 16px;
+  display: flex;
+}
+
+.profile-avatar {
+  background-color: #1f2937;
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  margin-bottom: 8px;
+}
+
+.profile-name {
+  margin-bottom: 4px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.profile-email {
+  color: #6b7280;
+  margin-bottom: 16px;
+}
+
+.profile-actions {
+  gap: 8px;
+  width: 100%;
+  display: flex;
+}
+
+.profile-button {
+  cursor: pointer;
+  background-color: #fff;
+  border: 2px solid #141618c2;
+  border-radius: 24px;
+  flex: 1;
+  padding: 8px 16px;
+  font-size: 14px;
+}
+
+.settings-button {
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  display: flex;
+}
+
+.rewards-card {
+  color: #fff;
+  background-color: #000;
+  border-radius: 8px;
+  margin: 16px;
+  padding: 16px;
+}
+
+.rewards-user {
+  align-items: center;
+  gap: 12px;
+  display: flex;
+}
+
+.rewards-avatar {
+  background-color: #374151;
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+.rewards-user-name {
+  font-weight: bold;
+}
+
+.rewards-user-email {
+  color: #9ca3af;
+  font-size: 14px;
+}
+
+.rewards-info {
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+  display: flex;
+}
+
+.rewards-label {
+  color: #d1d5db;
+  font-size: 14px;
+}
+
+.rewards-amount {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.rewards-badge {
+  background-color: #f9741600;
+  border-radius: 4px;
+  width: 101px;
+  height: 54px;
+  padding: 4px 12px;
+}
+
+.rewards-history-button {
+  color: #9ca3af;
+  cursor: pointer;
+  text-align: left;
+  background: none;
+  border: none;
+  margin-top: 8px;
+  font-size: 14px;
+  text-decoration: underline;
+}
+
+.profile-links {
+  flex-direction: column;
+  gap: 16px;
+  margin: 24px 16px;
+  display: flex;
+}
+
+.profile-link {
+  color: #333;
+  background-color: #fff;
+  border-radius: 8px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  display: flex;
+}
+
+.tabs {
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+  display: flex;
+}
+
+.tab {
+  text-align: center;
+  color: #6b7280;
+  flex: 1;
+  padding: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  position: relative;
+}
+
+.tab.active {
+  color: #000;
+  font-weight: 600;
+}
+
+.tab.active:after {
+  content: "";
+  background-color: #000;
+  height: 3px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.camera-container {
+  background-color: #000;
+  width: 100%;
+  height: 60vh;
+  position: relative;
+  overflow: hidden;
+}
+
+#camera-feed {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.camera-overlay {
+  background-color: #0000004d;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: absolute;
+  inset: 0;
+}
+
+.scan-area {
+  width: 250px;
+  height: 250px;
+}
+
+.scan-instructions {
+  text-align: center;
+  color: #6b7280;
+  padding: 16px;
+}
+
+.scan-button {
+  color: #fff;
+  cursor: pointer;
+  background-color: #22c55e;
+  border: none;
+  border-radius: 8px;
+  width: 80%;
+  margin: 0 auto;
+  padding: 16px;
+  font-size: 18px;
+  font-weight: bold;
+  display: block;
+}
+
+.scan-alternative {
+  text-align: center;
+  margin-top: 16px;
+}
+
+.alt-link {
+  color: #6b7280;
+  font-size: 14px;
+  text-decoration: underline;
+}
+
+.manual-content {
+  background-color: #f5f5f5;
+  padding: 16px;
+}
+
+.form-section {
+  margin-bottom: 24px;
+}
+
+.section-title {
+  margin-bottom: 12px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.section-title-small {
+  margin-bottom: 12px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.form-select {
+  appearance: none;
+  background-color: #fff;
+  border: 1px solid #d1d5db;
+  border-radius: 28px;
+  width: 100%;
+  height: 56px;
+  padding: 0 16px;
+  font-size: 16px;
+}
+
+.select-wrapper {
+  position: relative;
+}
+
+.select-arrow {
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  transform: translateY(-50%);
+}
+
+.pairs-input {
+  background-color: #fff;
+  border: 1px solid #d1d5db;
+  border-radius: 28px;
+  width: 100%;
+  height: 56px;
+  padding: 0 16px;
+  font-size: 16px;
+}
+
+.form-actions {
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin-top: 32px;
+  display: flex;
+}
+
+.proceed-link {
+  color: #000;
+  font-size: 14px;
+  text-decoration: underline;
+}
+
+.generate-button {
+  color: #fff;
+  cursor: pointer;
+  background-color: #000;
+  border: none;
+  border-radius: 8px;
+  width: 100%;
+  padding: 16px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.back-button {
+  cursor: pointer;
+  background: none;
+  border: none;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+/*# sourceMappingURL=Recycle App (New).9f367d21.css.map */
